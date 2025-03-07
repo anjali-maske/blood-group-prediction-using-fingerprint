@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal Login</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: url('https://images.unsplash.com/photo-1576086213369-97a306d36557?q=80&w=3540&auto=format&fit=crop') no-repeat center center / cover;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(64, 0, 128, 0.8);
+      z-index: -1;
+    }
+
+    .login-card {
+      width: 100%;
+      max-width: 400px;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+      color: #fff;
+    }
+
+    .login-card h2 {
+      font-size: 2rem;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .login-card p {
+      font-size: 0.9rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: #e0e0e0;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 0.8rem;
+      border: none;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      font-size: 1rem;
+    }
+
+    .form-group input::placeholder {
+      color: #b0b0b0;
+    }
+
+    .form-group input:focus {
+      outline: none;
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .login-btn {
+      display: block;
+      width: 100%;
+      padding: 0.8rem;
+      background: #7c3aed;
+      border: none;
+      border-radius: 8px;
+      color: #fff;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 1rem;
+      transition: background 0.3s ease;
+    }
+
+    .login-btn:hover {
+      background: #5b21b6;
+    }
+
+    .signup-link {
+      display: block;
+      text-align: center;
+      margin-top: 1rem;
+      color: #bb86fc;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    .signup-link:hover {
+      text-decoration: underline;
+    }
+
+    .icon {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+
+    .icon svg {
+      height: 50px;
+      width: 50px;
+      color: #bb86fc;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay"></div>
+  <div class="login-card">
+    <div class="icon">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5v4.5l3 3m7.5-7.5a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    </div>
+    <h2>BloodPrint Portal</h2>
+    <form id="login-form" method="POST" action="/login">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username" required />
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required />
+      </div>
+      <button type="submit" class="login-btn">Sign In</button>
+      <a href="/signup" class="signup-link">Don't have an account? Sign up</a>
+    </form>
+  </div>
+</body>
+</html>
