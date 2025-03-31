@@ -40,6 +40,7 @@ This project introduces a non-invasive approach to blood group prediction using 
 ### Screenshots
 #### Signup Page
 ![Screenshot (278)](https://github.com/user-attachments/assets/f716115e-7875-4c65-b9cc-943c3faeb4cc)
+![log_in](https://github.com/user-attachments/assets/0344bdc4-cc05-4b28-889f-12fc61970dcf)
 
 #### Predicting Result Page
 ![Screenshot 2025-03-05 223335](https://github.com/user-attachments/assets/b5701d15-8837-46b8-aa13-c200625b0d35)
